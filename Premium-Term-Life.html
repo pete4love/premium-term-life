@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Term Life Insurance - Secure Your Family's Future</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+
+        .hero .sub-headline {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: #555;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .premium-intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .premium-intro h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .premium-intro p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Key Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            color: #ff6b6b;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Trust Section */
+        .trust {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .trust h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .trust p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .states-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .state-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .state-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta h3 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .urgency-text {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .final-cta-button {
+            background: white;
+            color: #ff6b6b;
+            padding: 1.5rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .disclaimer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .sub-headline {
+                font-size: 1.1rem;
+            }
+            
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .benefit-card {
+                padding: 2rem;
+            }
+            
+            .states-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .final-cta h3 {
+                font-size: 2.2rem;
+            }
+            
+            .final-cta-button {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .benefits, .trust, .final-cta {
+                padding: 3rem 1rem;
+            }
+            
+            .premium-intro {
+                padding: 2rem;
+            }
+            
+            .states-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Family's Future.<br>Secured. Simply.</h1>
+            <p class="sub-headline">Protect what matters most with affordable, flexible term life coverage designed for your peace of mind.</p>
+            <a href="https://calendly.com/petfavor308308" target="_blank" class="cta-button">👉 Secure Your Family's Future - Book A Quick Chat Now!</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Life Changes. Your Protection Should Too.</h2>
+            
+            <div class="story-text">
+                <p>Are you a parent, a spouse, or someone building a future? You understand the importance of providing for your loved ones, no matter what tomorrow brings. But the thought of life insurance can feel overwhelming. What if it was simple, affordable, and actually helped your family while you're still here?</p>
+            </div>
+
+            <div class="premium-intro">
+                <h3>Introducing Premium Term Life: Protection That Truly Cares.</h3>
+                <p>We believe securing your family's financial future should be straightforward and stress-free. Our Premium Term Life plan isn't just about what happens if, it's about empowering your family today.</p>
+            </div>
+
+            <h3 class="section-title" style="margin-top: 4rem;">Unlock Benefits You Didn't Know Were Possible:</h3>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4><span class="benefit-icon">💰</span> Access Cash When It Matters</h4>
+                    <p>Our unique "Living Benefits" allow you to tap into your policy's value before it matures, for qualifying events like critical, chronic, or terminal illnesses. Imagine having financial flexibility when you need it most.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h4><span class="benefit-icon">👨‍👩‍👧‍👦</span> All Your Children Covered, For Free</h4>
+                    <p>Yes, you read that right! Extend comprehensive coverage to all your children under one policy, at absolutely no additional cost to you.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h4><span class="benefit-icon">💎</span> Surprisingly Affordable</h4>
+                    <p>Protection doesn't have to break the bank. Get robust coverage for just pennies a day. We make premium security accessible.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h4><span class="benefit-icon">⚡</span> Simple & Swift Approval</h4>
+                    <p>Skip the hassle of lengthy paperwork and invasive medical exams for qualified applicants. Get instant approval and peace of mind faster than you thought possible.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h4><span class="benefit-icon">🛡️</span> Disability Protection Built-In</h4>
+                    <p>Should you become disabled, your premiums can be waived, ensuring your family's coverage remains active without added financial strain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <h3>Your Partner in Protection Across Multiple States</h3>
+            <p>Choosing the right partner for your family's security is crucial. As a licensed professional, I am dedicated to providing clear, honest guidance tailored to your unique needs.</p>
+            
+            <h4 style="font-size: 1.5rem; margin-bottom: 2rem;">Proudly Licensed in:</h4>
+            
+            <div class="states-grid">
+                <div class="state-card">
+                    <h4>🏠 Texas</h4>
+                    <p>Domiciled State</p>
+                </div>
+                <div class="state-card">
+                    <h4>🎵 Tennessee</h4>
+                    <p>Licensed</p>
+                </div>
+                <div class="state-card">
+                    <h4>🏛️ Virginia</h4>
+                    <p>Licensed</p>
+                </div>
+                <div class="state-card">
+                    <h4>🦀 Maryland</h4>
+                    <p>Licensed</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 2rem; font-style: italic;">We're not just selling policies; we're building relationships and safeguarding futures.</p>
+            
+            <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 15px; margin-top: 2rem; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <h4 style="font-size: 1.3rem; margin-bottom: 1rem; color: #ecf0f1;">🔒 Licensed & Trusted Professional</h4>
+                <p style="margin-bottom: 1.5rem; opacity: 0.9;">Texas - NPN License #2935596<br>Verify My Credentials for Your Peace of Mind</p>
+                <a href="https://www.sircon.com/ComplianceExpress/Inquiry/consumerInquiry.do?nonSscrb=Y" target="_blank" style="display: inline-block; background-color: white; color: #2c3e50; padding: 12px 24px; text-decoration: none; font-weight: 600; border-radius: 25px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">🔍 VERIFY MY LICENSE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h3>Don't Wait. Your Family Deserves This Peace of Mind.</h3>
+            <p class="urgency-text">Every moment you wait is a moment your family's future could be at risk. Let's explore how surprisingly easy and affordable it is to secure their tomorrow, starting today.</p>
+            
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; font-weight: 600;">Ready to discuss your personalized Premium Term Life plan?</p>
+            
+            <a href="https://calendly.com/petfavor308308" target="_blank" class="final-cta-button">✅ BOOK FREE CONSULTATION - No Obligation!</a>
+            
+            <p class="disclaimer">Takes less than 15 minutes. No pushy sales, just clear answers.</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.benefit-card, .state-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
